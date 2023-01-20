@@ -1,4 +1,4 @@
-#! /usr/bin/bash env
+#! /usr/bin/bash
 
 DATA_DIR="/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/annotations"
 
