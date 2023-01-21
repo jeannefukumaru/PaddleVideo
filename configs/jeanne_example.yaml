@@ -20,17 +20,17 @@ DATASET: #DATASET field
     train:
         format: "VideoDataset" #Mandatory, indicate the type of train dataset, please refer to the 'paddlevidel/loader/dateset'.
         data_prefix: "" #Optional, train data root path.
-        file_path: "data/ucf101/ucf101_train_split_1_videos.txt" #Mandatory, train data index file path
+        file_path: "/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/ucf101_train_split_1_videos.txt" #Mandatory, train data index file path
         suffix: ".avi"
     valid:
         format: "VideoDataset" #Mandatory, indicate the type of valid dataset, please refer to the 'paddlevidel/loader/dateset'
         data_prefix: "" #Optional, valid data root path
-        file_path: "data/ucf101/ucf101_val_split_1_videos.txt" #Mandatory, valid data index file path
+        file_path: "/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/ucf101_val_split_1_videos.txt" #Mandatory, valid data index file path
         suffix: ".avi"
     test:
         format: "VideoDataset" #Mandotary, indicate the type of test dataset, please refer to the 'paddlevideo/loader/dataset'.
         data_prefix: "" #Optional, test data root path.
-        file_path: "data/ucf101/ucf101_val_split_1_videos.txt" #Mandotary, test data index file path.
+        file_path: "/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/ucf101_val_split_1_videos.txt" #Mandotary, test data index file path.
         suffix: ".avi"
 
 PIPELINE: #PIPELINE field
@@ -109,6 +109,6 @@ INFERENCE:
     target_size: 224
 
 model_name: "TSN" #Mandatory, model name.
-log_interval: 20 #Optional, the interval of logger.
-epochs: 5 #Mandatory, total epoch
+log_interval: 10 #Optional, the interval of logger.
+epochs: 2 #Mandatory, total epoch
 log_level: "DEBUG" #Optional, the logger level.
