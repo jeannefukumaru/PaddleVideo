@@ -210,8 +210,8 @@ def load_ckpt(model, weight_path, **kargs):
     """
     #model.set_state_dict(state_dict)
 
-    if not osp.isfile(weight_path):
-        raise IOError(f'{weight_path} is not a checkpoint file')
+#     if not osp.isfile(weight_path):
+#         raise IOError(f'{weight_path} is not a checkpoint file')
     #state_dicts = load(weight_path)
 
     logger = get_logger("paddlevideo")
