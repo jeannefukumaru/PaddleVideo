@@ -3,7 +3,7 @@ MODEL: #MODEL field
     framework: "Recognizer2D" #Mandatory ["Recognizer1D", "Recognizer2D", "Recognizer3D", "BMNLocalizer"], indicate the type of network, please refer to the 'paddlevideo/modeling/framework/'.
     backbone:
         name: "ResNet" #Optional, indicate the type of backbone, please refer to the 'paddlevideo/modeling/backbones/'.
-        pretrained: "ResNet50_vd_ssld_v2_pretrained.pdparams" #Optional, pretrained backbone params path. pass "" or " " without loading from files.
+        pretrained: "ResNet50_pretrain.pdparams" #Optional, pretrained backbone params path. pass "" or " " without loading from files.
         depth: 50 #Optional, the depth of backbone architecture.
     head:
         name: "TSNHead" #Mandatory, indicate the type of head, please refer to the 'paddlevideo/modeling/heads'
