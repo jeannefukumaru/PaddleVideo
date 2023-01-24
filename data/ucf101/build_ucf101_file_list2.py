@@ -66,7 +66,7 @@ def build_split_list(split, frame_info, shuffle=False):
 
 
 def parse_ucf101_splits(level):
-    class_ind = [x.strip().split() for x in open('/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/annotations/classInd.txt')]
+    class_ind = [x.strip().split() for x in open('/databricks/driver/ucf101/annotations/classInd.txt')]
     class_mapping = {x[1]: int(x[0]) - 1 for x in class_ind}
 
     def line2rec(line):
@@ -80,11 +80,11 @@ def parse_ucf101_splits(level):
     for i in range(1, 4):
         train_list = [
             line2rec(x)
-            for x in open('/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/annotations/trainlist{:02d}.txt'.format(i))
+            for x in open('/databricks/driver/ucf101/annotations/trainlist{:02d}.txt'.format(i))
         ]
         test_list = [
             line2rec(x)
-            for x in open('/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/annotations/testlist{:02d}.txt'.format(i))
+            for x in open('/databricks/driver/ucf101/annotations/testlist{:02d}.txt'.format(i))
         ]
         splits.append((train_list, test_list))
     return splits
@@ -102,7 +102,7 @@ def parse_args():
         type=str,
         default='videos',
         choices=['rawframes', 'videos'])
-    parser.add_argument('--out_list_path', type=str, default='/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/')
+    parser.add_argument('--out_list_path', type=str, default='/databricks/driver/ucf101/')
     parser.add_argument('--shuffle', action='store_true', default=False)
     args = parser.parse_args()
 
