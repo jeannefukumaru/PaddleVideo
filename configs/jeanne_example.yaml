@@ -20,7 +20,7 @@ DATASET: #DATASET field
     train:
         format: "VideoDataset" #Mandatory, indicate the type of train dataset, please refer to the 'paddlevidel/loader/dateset'.
         data_prefix: "" #Optional, train data root path.
-        file_path: "/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/ucf101_train_split_1_videos.txt" #Mandatory, train data index file path
+        file_path: "/dbfs/FileStore/jeanne_choo@databricks.com/ucf101/annotations/trainlist01.txt" #Mandatory, train data index file path
         suffix: ".avi"
     valid:
         format: "VideoDataset" #Mandatory, indicate the type of valid dataset, please refer to the 'paddlevidel/loader/dateset'
