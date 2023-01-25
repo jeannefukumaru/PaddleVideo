@@ -110,5 +110,5 @@ INFERENCE:
 
 model_name: "TSN" #Mandatory, model name.
 log_interval: 20 #Optional, the interval of logger.
-epochs: 5 #Mandatory, total epoch
+epochs: 1 #Mandatory, total epoch
 log_level: "DEBUG" #Optional, the logger level.
