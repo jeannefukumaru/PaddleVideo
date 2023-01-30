@@ -34,7 +34,7 @@ def main_function(is_local):
           batch_size=batch_size,
           thread_num=thread_num,
           input_type=0,
-          pipe_command=python criteo_reader.py %d" % sparse_feature_dim,
+          pipe_command="python criteo_reader.py %d" % sparse_feature_dim,
           use_var=[dense_input] + sparse_input_ids + [label])
 
     whole_filelist = ["raw_data/part-%d" % x
