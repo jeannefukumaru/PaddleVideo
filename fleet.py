@@ -1,5 +1,5 @@
 from __future__ import print_function
-from argparse import parse_args
+from argparse import ArgumentParser
 import os
 import sys
 
@@ -16,7 +16,10 @@ batch_size = 100
 thread_num = 10
 embedding_size = 10
 
-args = parse_args()
+parser = ArgumentParser()
+parser.add_argument("is_local")
+
+args = parser.parse_args()
 
 def main_function(is_local):
 
