@@ -1,5 +1,5 @@
 from __future__ import print_function
-from args import parse_args
+from argparse import parse_args
 import os
 import sys
 
